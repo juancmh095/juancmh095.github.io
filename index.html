@@ -1,0 +1,1083 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="description" content="Juan Carlos Méndez Hernández - Desarrollador Fullstack Freelancer. Especialista en Angular, Node.js, PHP, Python, React Native y más. +8 años de experiencia desarrollando aplicaciones desde cero.">
+    <meta name="keywords" content="desarrollador fullstack, freelancer, Angular, Node.js, PHP, Python, React Native, desarrollo web, aplicaciones móviles, automatización, Juan Carlos Méndez Hernández">
+    <meta name="author" content="Juan Carlos Méndez Hernández">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow">
+    <meta name="language" content="Spanish">
+    <meta name="revisit-after" content="7 days">
+    <meta name="distribution" content="global">
+    <meta name="rating" content="general">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://juancarlosmendez.dev">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Juan Carlos Méndez Hernández - Desarrollador Fullstack Freelancer">
+    <meta property="og:description" content="Desarrollador Fullstack con +8 años de experiencia. Especialista en desarrollo web, aplicaciones móviles y automatizaciones.">
+    <meta property="og:url" content="https://juancarlosmendez.dev">
+    <meta property="og:site_name" content="Juan Carlos Méndez Hernández">
+    <meta property="og:locale" content="es_MX">
+    <meta property="og:image" content="https://juancarlosmendez.dev/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Juan Carlos Méndez Hernández - Desarrollador Fullstack">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Juan Carlos Méndez Hernández - Desarrollador Fullstack">
+    <meta name="twitter:description" content="Desarrollador Fullstack con +8 años de experiencia. Especialista en desarrollo web, aplicaciones móviles y automatizaciones.">
+    <meta name="twitter:image" content="https://juancarlosmendez.dev/og-image.jpg">
+    <meta name="twitter:image:alt" content="Juan Carlos Méndez Hernández - Desarrollador Fullstack">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/jcmh.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/jcmh.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/jcmh.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/jcmh.png">
+    
+    <title>Juan Carlos Méndez Hernández | Desarrollador Fullstack Freelancer</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['DM Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#2563eb',
+                        secondary: '#7c3aed',
+                        accent: '#10b981',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        /* Cursor personalizado con emoji de nave espacial 🚀 apuntando a la izquierda */
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #ffffff;
+            color: #111827;
+            overflow-x: hidden;
+            cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cg transform='rotate(-90 16 16)'%3E%3Ctext x='50%25' y='50%25' font-size='24' text-anchor='middle' dominant-baseline='middle'%3E🚀%3C/text%3E%3C/g%3E%3C/svg%3E") 16 16, auto;
+        }
+        
+        a, button, .cursor-pointer, input, textarea, select, [role='button'] {
+            cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cg transform='rotate(-90 16 16)'%3E%3Ctext x='50%25' y='50%25' font-size='24' text-anchor='middle' dominant-baseline='middle'%3E🚀%3C/text%3E%3C/g%3E%3C/svg%3E") 16 16, pointer;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        .fade-in-up {
+            animation: fadeInUp 0.6s ease-out;
+        }
+        
+        .slide-in {
+            animation: slideIn 0.8s ease-out;
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .nav-blur {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+        }
+        
+        .section-divider {
+            height: 2px;
+            background: #e5e7eb;
+        }
+        
+        .timeline-line {
+            background: linear-gradient(to right, #2563eb, #7c3aed, #10b981);
+            height: 4px;
+        }
+        
+        .timeline-dot {
+            background: #2563eb;
+            border: 4px solid white;
+            box-shadow: 0 0 0 3px #e5e7eb, 0 0 20px rgba(37, 99, 235, 0.3);
+            animation: pulse-dot 2s infinite;
+        }
+        
+        @keyframes pulse-dot {
+            0%, 100% {
+                transform: scale(1);
+                box-shadow: 0 0 0 3px #e5e7eb, 0 0 20px rgba(37, 99, 235, 0.3);
+            }
+            50% {
+                transform: scale(1.1);
+                box-shadow: 0 0 0 3px #e5e7eb, 0 0 30px rgba(37, 99, 235, 0.6);
+            }
+        }
+        
+        .timeline-item {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease-out;
+        }
+        
+        .timeline-item.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .timeline-icon {
+            transition: all 0.3s ease;
+        }
+        
+        .timeline-item:hover .timeline-icon {
+            transform: scale(1.2) rotate(5deg);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .timeline-horizontal {
+                flex-direction: column;
+            }
+            .timeline-line {
+                width: 4px;
+                height: auto;
+                background: linear-gradient(to bottom, #2563eb, #7c3aed, #10b981);
+            }
+            
+            /* Ajustes de tipografía para móviles */
+            h1 {
+                font-size: 2.5rem !important;
+            }
+            
+            h2 {
+                font-size: 2rem !important;
+            }
+            
+            /* Mejora de espaciado en móviles */
+            section {
+                padding-top: 3rem;
+                padding-bottom: 3rem;
+            }
+        }
+        
+        @media (max-width: 640px) {
+            /* Ajustes adicionales para pantallas muy pequeñas */
+            .stat-number {
+                font-size: 2rem;
+            }
+            
+            /* Navegación móvil mejorada */
+            #mobileMenu {
+                max-height: 100vh;
+                overflow-y: auto;
+            }
+        }
+        
+        /* Mejoras de accesibilidad y rendimiento */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        /* Logo en navegación */
+        .logo-img {
+            display: block;
+        }
+        
+        .logo-text {
+            display: none;
+        }
+        
+        .logo-img[src=""],
+        .logo-img:not([src]) {
+            display: none;
+        }
+        
+        .logo-img[src=""] ~ .logo-text,
+        .logo-img:not([src]) ~ .logo-text {
+            display: block;
+        }
+        
+        /* Fallback si la imagen no carga */
+        .logo-img:error {
+            display: none;
+        }
+        
+        .logo-img:error ~ .logo-text {
+            display: block;
+        }
+        
+        /* Prevenir overflow horizontal */
+        html, body {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+        
+        /* Mejora de contraste para accesibilidad */
+        a:focus, button:focus {
+            outline: 2px solid #2563eb;
+            outline-offset: 2px;
+        }
+        
+        .project-overlay {
+            background: rgba(37, 99, 235, 0.95);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .project-card:hover .project-overlay {
+            opacity: 1;
+        }
+        
+        .tech-icon {
+            transition: all 0.3s ease;
+        }
+        
+        .tech-icon:hover {
+            transform: scale(1.1) rotate(5deg);
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            line-height: 1;
+            word-break: break-word;
+        }
+        
+        @media (min-width: 640px) {
+            .stat-number {
+                font-size: 3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 nav-blur border-b border-gray-200 shadow-sm" role="navigation" aria-label="Navegación principal">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex-shrink-0">
+                    <a href="#inicio" class="flex items-center" aria-label="Inicio - Juan Carlos Méndez Hernández">
+                        <img src="assets/logo-negro.png" alt="JCMH - Juan Carlos Méndez Hernández" class="h-10 w-auto max-w-[120px] object-contain logo-img">
+                        <span class="text-2xl font-display font-bold text-primary logo-text">JCMH</span>
+                    </a>
+                </div>
+                <button id="navToggle" class="md:hidden flex flex-col gap-1.5 p-2 text-gray-700" aria-label="Toggle navigation">
+                    <span class="w-6 h-0.5 bg-gray-700 transition-all"></span>
+                    <span class="w-6 h-0.5 bg-gray-700 transition-all"></span>
+                    <span class="w-6 h-0.5 bg-gray-700 transition-all"></span>
+                </button>
+                <ul id="navMenu" class="hidden md:flex items-center space-x-8">
+                    <li><a href="#inicio" class="text-gray-700 hover:text-primary font-medium transition-colors">Inicio</a></li>
+                    <li><a href="#sobre-mi" class="text-gray-700 hover:text-primary font-medium transition-colors">Sobre Mí</a></li>
+                    <li><a href="#experiencia" class="text-gray-700 hover:text-primary font-medium transition-colors">Experiencia</a></li>
+                    <li><a href="#servicios" class="text-gray-700 hover:text-primary font-medium transition-colors">Servicios</a></li>
+                    <li><a href="#tecnologias" class="text-gray-700 hover:text-primary font-medium transition-colors">Tecnologías</a></li>
+                    <li><a href="#proyectos" class="text-gray-700 hover:text-primary font-medium transition-colors">Proyectos</a></li>
+                    <li><a href="#contacto" class="text-gray-700 hover:text-primary font-medium transition-colors">Contacto</a></li>
+                    <li><a href="assets/cv.pdf" id="downloadCVBtn" download="CV_Juan_Carlos_Mendez_Hernandez.pdf" class="bg-primary text-white px-6 py-2.5 rounded-lg font-semibold hover:bg-blue-700 transition-all shadow-md hover:shadow-lg">Descargar CV</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden nav-blur border-t border-gray-200">
+            <div class="max-w-7xl mx-auto px-4 py-4 space-y-3">
+                <a href="#inicio" class="block text-gray-700 hover:text-primary font-medium py-2">Inicio</a>
+                <a href="#sobre-mi" class="block text-gray-700 hover:text-primary font-medium py-2">Sobre Mí</a>
+                <a href="#experiencia" class="block text-gray-700 hover:text-primary font-medium py-2">Experiencia</a>
+                <a href="#servicios" class="block text-gray-700 hover:text-primary font-medium py-2">Servicios</a>
+                <a href="#tecnologias" class="block text-gray-700 hover:text-primary font-medium py-2">Tecnologías</a>
+                <a href="#proyectos" class="block text-gray-700 hover:text-primary font-medium py-2">Proyectos</a>
+                <a href="#contacto" class="block text-gray-700 hover:text-primary font-medium py-2">Contacto</a>
+                <a href="assets/cv.pdf" id="downloadCVBtnMobile" download="CV_Juan_Carlos_Mendez_Hernandez.pdf" class="block bg-primary text-white px-6 py-2.5 rounded-lg font-semibold text-center hover:bg-blue-700 transition-all">Descargar CV</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="relative min-h-screen flex items-center overflow-hidden pt-20 bg-white" aria-label="Sección de inicio">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-20">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="text-center lg:text-left fade-in-up">
+                    <div class="inline-block bg-blue-50 text-primary px-4 py-2 rounded-full text-sm font-semibold mb-6">
+                        👋 Hola, soy
+                    </div>
+                    <h1 class="text-5xl md:text-6xl lg:text-7xl font-display font-bold mb-6 leading-tight text-gray-900">
+                        Juan Carlos<br>
+                        <span class="text-primary">Méndez Hernández</span>
+                    </h1>
+                    <p class="text-2xl md:text-3xl text-gray-700 font-semibold mb-8">Desarrollador Fullstack</p>
+                    <p class="text-gray-600 text-lg md:text-xl mb-10 leading-relaxed max-w-xl mx-auto lg:mx-0">
+                        Ingeniero en Sistemas Computacionales con más de <span class="text-primary font-bold">8 años de experiencia</span> 
+                        desarrollando aplicaciones web y móviles desde cero. Especialista en 
+                        automatizaciones y soluciones tecnológicas innovadoras.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 mb-12 justify-center lg:justify-start">
+                        <a href="#contacto" class="bg-primary text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-all hover:shadow-xl hover:-translate-y-1 text-center">
+                            Contáctame
+                        </a>
+                        <a href="#proyectos" class="bg-white text-gray-700 border-2 border-gray-300 px-8 py-4 rounded-lg font-semibold hover:border-primary hover:text-primary transition-all text-center">
+                            Ver Proyectos
+                        </a>
+                    </div>
+                    <div class="grid grid-cols-3 gap-4 max-w-md mx-auto lg:mx-0">
+                        <div class="bg-gray-50 rounded-xl p-4 sm:p-6 text-center border border-gray-200 overflow-hidden">
+                            <p class="stat-number text-primary mb-2" data-count="8">0+</p>
+                            <p class="text-xs sm:text-sm text-gray-600 font-medium">Años</p>
+                        </div>
+                        <div class="bg-gray-50 rounded-xl p-4 sm:p-6 text-center border border-gray-200 overflow-hidden">
+                            <p class="stat-number text-primary mb-2" data-count="50">0+</p>
+                            <p class="text-xs sm:text-sm text-gray-600 font-medium">Proyectos</p>
+                        </div>
+                        <div class="bg-gray-50 rounded-xl p-4 sm:p-6 text-center border border-gray-200 overflow-hidden">
+                            <p class="stat-number text-primary mb-2" style="font-size: 2rem;">100%</p>
+                            <p class="text-xs sm:text-sm text-gray-600 font-medium">Comprometido</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden lg:flex justify-center items-center slide-in">
+                    <div class="relative w-full max-w-2xl">
+                        <div class="w-full aspect-square bg-gray-100 rounded-3xl flex flex-col items-center justify-center border-4 border-gray-200 shadow-2xl overflow-hidden">
+                            <img src="assets/yo.png" alt="Juan Carlos Méndez Hernández - Desarrollador Fullstack" class="w-full h-full object-cover rounded-3xl">
+                        </div>
+                        <div class="absolute -top-8 -right-8 w-32 h-32 bg-secondary opacity-20 rounded-full blur-3xl"></div>
+                        <div class="absolute -bottom-8 -left-8 w-40 h-40 bg-accent opacity-20 rounded-full blur-3xl"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="sobre-mi" class="py-24 bg-gray-50" aria-label="Sobre mí">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in-up">
+                <span class="inline-block bg-blue-50 text-primary px-6 py-2 rounded-full text-sm font-semibold uppercase tracking-wide mb-6">Sobre Mí</span>
+                <h2 class="text-4xl md:text-5xl font-display font-bold text-gray-900 mb-4">Conoce mi Historia</h2>
+                <div class="section-divider max-w-24 mx-auto"></div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div class="fade-in-up">
+                    <div class="bg-white rounded-2xl p-10 shadow-lg mb-8">
+                        <p class="text-xl text-gray-700 mb-6 leading-relaxed">
+                            Soy un desarrollador fullstack apasionado por crear <span class="text-primary font-semibold">soluciones tecnológicas</span> 
+                            que transforman ideas en realidad. Nacido en Tabasco, México, y actualmente 
+                            radicando en Nuevo León, he dedicado mi carrera a perfeccionar mis habilidades 
+                            y entregar proyectos de alta calidad.
+                        </p>
+                        <p class="text-gray-600 leading-relaxed">
+                            Comencé mi carrera programando con <span class="text-primary font-semibold">PHP</span> y desde entonces he expandido mis 
+                            conocimientos a múltiples tecnologías modernas. He trabajado en empresas 
+                            reconocidas y como freelancer, desarrollando desde aplicaciones web complejas 
+                            hasta sistemas de automatización empresarial.
+                        </p>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-6 fade-in-up" style="animation-delay: 0.2s;">
+                    <div class="bg-primary text-white rounded-2xl p-8 shadow-lg">
+                        <div class="w-16 h-16 bg-white bg-opacity-20 rounded-xl flex items-center justify-center mb-4">
+                            <i class="fas fa-birthday-cake text-2xl"></i>
+                        </div>
+                        <p class="font-semibold mb-1 text-lg">Fecha de Nacimiento</p>
+                        <p class="text-sm text-white text-opacity-90">15 de Julio de 1995</p>
+                    </div>
+                    <div class="bg-secondary text-white rounded-2xl p-8 shadow-lg">
+                        <div class="w-16 h-16 bg-white bg-opacity-20 rounded-xl flex items-center justify-center mb-4">
+                            <i class="fas fa-map-marker-alt text-2xl"></i>
+                        </div>
+                        <p class="font-semibold mb-1 text-lg">Ubicación Actual</p>
+                        <p class="text-sm text-white text-opacity-90">Nuevo León, México</p>
+                    </div>
+                    <div class="bg-accent text-white rounded-2xl p-8 shadow-lg">
+                        <div class="w-16 h-16 bg-white bg-opacity-20 rounded-xl flex items-center justify-center mb-4">
+                            <i class="fas fa-graduation-cap text-2xl"></i>
+                        </div>
+                        <p class="font-semibold mb-1 text-lg">Formación</p>
+                        <p class="text-sm text-white text-opacity-90">Ing. Sistemas Computacionales</p>
+                    </div>
+                    <div class="bg-primary text-white rounded-2xl p-8 shadow-lg">
+                        <div class="w-16 h-16 bg-white bg-opacity-20 rounded-xl flex items-center justify-center mb-4">
+                            <i class="fas fa-code text-2xl"></i>
+                        </div>
+                        <p class="font-semibold mb-1 text-lg">Experiencia</p>
+                        <p class="text-sm text-white text-opacity-90">Fullstack desde 2015</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experiencia" class="py-24 bg-white" aria-label="Experiencia profesional">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in-up">
+                <span class="inline-block bg-blue-50 text-primary px-6 py-2 rounded-full text-sm font-semibold uppercase tracking-wide mb-6">Experiencia</span>
+                <h2 class="text-4xl md:text-5xl font-display font-bold text-gray-900 mb-4">Mi Trayectoria Profesional</h2>
+                <div class="section-divider max-w-24 mx-auto"></div>
+            </div>
+            
+            <!-- Timeline Horizontal -->
+            <div class="relative py-12">
+                <!-- Línea horizontal de la timeline -->
+                <div class="hidden md:block absolute top-1/2 left-0 right-0 timeline-line transform -translate-y-1/2 rounded-full"></div>
+                
+                <!-- Items de la timeline -->
+                <div class="flex flex-col md:flex-row md:justify-between md:items-center gap-8 md:gap-4 timeline-horizontal">
+                    <!-- Experiencia 1 -->
+                    <div class="relative timeline-item flex-1">
+                        <div class="hidden md:block absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-6 h-6 rounded-full timeline-dot z-10">
+                            <div class="w-full h-full bg-white rounded-full"></div>
+                        </div>
+                        <div class="bg-white rounded-2xl p-6 shadow-lg card-hover border-t-4 border-primary relative md:mt-8">
+                            <div class="w-16 h-16 bg-primary rounded-xl flex items-center justify-center shadow-lg timeline-icon mx-auto mb-4">
+                                <i class="fas fa-briefcase text-white text-2xl"></i>
+                            </div>
+                            <div class="text-center">
+                                <div class="flex flex-wrap items-center justify-center gap-2 mb-3">
+                                    <h3 class="text-lg font-bold text-gray-900">Desarrollador Fullstack</h3>
+                                </div>
+                                <span class="inline-block bg-blue-50 text-primary px-3 py-1 rounded-full text-xs font-semibold mb-2">Ragasa</span>
+                                <span class="inline-block bg-green-50 text-green-700 px-3 py-1 rounded-full text-xs font-semibold mb-3">Actual</span>
+                                <p class="text-sm text-gray-600 leading-relaxed">Desarrollo y mantenimiento de aplicaciones empresariales.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Experiencia 2 -->
+                    <div class="relative timeline-item flex-1">
+                        <div class="hidden md:block absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-6 h-6 rounded-full timeline-dot z-10">
+                            <div class="w-full h-full bg-white rounded-full"></div>
+                        </div>
+                        <div class="bg-white rounded-2xl p-6 shadow-lg card-hover border-t-4 border-secondary relative md:mb-8">
+                            <div class="w-16 h-16 bg-secondary rounded-xl flex items-center justify-center shadow-lg timeline-icon mx-auto mb-4">
+                                <i class="fas fa-user-tie text-white text-2xl"></i>
+                            </div>
+                            <div class="text-center">
+                                <div class="flex flex-wrap items-center justify-center gap-2 mb-3">
+                                    <h3 class="text-lg font-bold text-gray-900">Freelancer</h3>
+                                </div>
+                                <span class="inline-block bg-blue-50 text-primary px-3 py-1 rounded-full text-xs font-semibold mb-2">Independiente</span>
+                                <span class="inline-block bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-xs font-semibold mb-3">2015 - Actual</span>
+                                <p class="text-sm text-gray-600 leading-relaxed">Desarrollo de aplicaciones personalizadas y soporte técnico.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Experiencia 3 -->
+                    <div class="relative timeline-item flex-1">
+                        <div class="hidden md:block absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-6 h-6 rounded-full timeline-dot z-10">
+                            <div class="w-full h-full bg-white rounded-full"></div>
+                        </div>
+                        <div class="bg-white rounded-2xl p-6 shadow-lg card-hover border-t-4 border-accent relative md:mt-8">
+                            <div class="w-16 h-16 bg-accent rounded-xl flex items-center justify-center shadow-lg timeline-icon mx-auto mb-4">
+                                <i class="fas fa-building text-white text-2xl"></i>
+                            </div>
+                            <div class="text-center">
+                                <div class="flex flex-wrap items-center justify-center gap-2 mb-3">
+                                    <h3 class="text-lg font-bold text-gray-900">Desarrollador Fullstack</h3>
+                                </div>
+                                <span class="inline-block bg-blue-50 text-primary px-3 py-1 rounded-full text-xs font-semibold mb-3">Vasster Software</span>
+                                <p class="text-sm text-gray-600 leading-relaxed">Desarrollo de aplicaciones web y móviles.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Experiencia 4 -->
+                    <div class="relative timeline-item flex-1">
+                        <div class="hidden md:block absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-6 h-6 rounded-full timeline-dot z-10">
+                            <div class="w-full h-full bg-white rounded-full"></div>
+                        </div>
+                        <div class="bg-white rounded-2xl p-6 shadow-lg card-hover border-t-4 border-primary relative md:mb-8">
+                            <div class="w-16 h-16 bg-primary rounded-xl flex items-center justify-center shadow-lg timeline-icon mx-auto mb-4">
+                                <i class="fas fa-shipping-fast text-white text-2xl"></i>
+                            </div>
+                            <div class="text-center">
+                                <div class="flex flex-wrap items-center justify-center gap-2 mb-3">
+                                    <h3 class="text-lg font-bold text-gray-900">Desarrollador Fullstack</h3>
+                                </div>
+                                <span class="inline-block bg-blue-50 text-primary px-3 py-1 rounded-full text-xs font-semibold mb-3">CODEX</span>
+                                <p class="text-sm text-gray-600 leading-relaxed">Sistemas para gestión aduanal.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Experiencia 5 -->
+                    <div class="relative timeline-item flex-1">
+                        <div class="hidden md:block absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-6 h-6 rounded-full timeline-dot z-10">
+                            <div class="w-full h-full bg-white rounded-full"></div>
+                        </div>
+                        <div class="bg-white rounded-2xl p-6 shadow-lg card-hover border-t-4 border-secondary relative md:mt-8">
+                            <div class="w-16 h-16 bg-secondary rounded-xl flex items-center justify-center shadow-lg timeline-icon mx-auto mb-4">
+                                <i class="fas fa-laptop-code text-white text-2xl"></i>
+                            </div>
+                            <div class="text-center">
+                                <div class="flex flex-wrap items-center justify-center gap-2 mb-3">
+                                    <h3 class="text-lg font-bold text-gray-900">Desarrollador Fullstack</h3>
+                                </div>
+                                <span class="inline-block bg-blue-50 text-primary px-3 py-1 rounded-full text-xs font-semibold mb-3">SYCNOS IT</span>
+                                <p class="text-sm text-gray-600 leading-relaxed">Soluciones tecnológicas y mantenimiento.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Experiencia 6 -->
+                    <div class="relative timeline-item flex-1">
+                        <div class="hidden md:block absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-6 h-6 rounded-full timeline-dot z-10">
+                            <div class="w-full h-full bg-white rounded-full"></div>
+                        </div>
+                        <div class="bg-white rounded-2xl p-6 shadow-lg card-hover border-t-4 border-accent relative md:mb-8">
+                            <div class="w-16 h-16 bg-accent rounded-xl flex items-center justify-center shadow-lg timeline-icon mx-auto mb-4">
+                                <i class="fas fa-network-wired text-white text-2xl"></i>
+                            </div>
+                            <div class="text-center">
+                                <div class="flex flex-wrap items-center justify-center gap-2 mb-3">
+                                    <h3 class="text-lg font-bold text-gray-900">Desarrollador Fullstack</h3>
+                                </div>
+                                <span class="inline-block bg-blue-50 text-primary px-3 py-1 rounded-full text-xs font-semibold mb-3">Desarrollos Corporativos</span>
+                                <p class="text-sm text-gray-600 leading-relaxed">Aplicaciones corporativas y automatizaciones.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Detalles expandidos (opcional, para mostrar más info) -->
+            <div class="mt-12 grid md:grid-cols-2 gap-6">
+                <div class="bg-gray-50 rounded-2xl p-6">
+                    <h4 class="font-bold text-gray-900 mb-3">Proyectos Destacados como Freelancer</h4>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-start"><span class="text-primary mr-2 mt-1">▸</span> Soporte y mantenimiento para <strong>Sasj</strong></li>
+                        <li class="flex items-start"><span class="text-primary mr-2 mt-1">▸</span> Desarrollo de 2 softwares: Gestión de Actividades y Control de Activos</li>
+                        <li class="flex items-start"><span class="text-primary mr-2 mt-1">▸</span> Aplicación <strong>ProveClick</strong> (Chile)</li>
+                        <li class="flex items-start"><span class="text-primary mr-2 mt-1">▸</span> Aplicaciones tipo Uber</li>
+                        <li class="flex items-start"><span class="text-primary mr-2 mt-1">▸</span> Actualización Angular para <strong>Cartolito</strong></li>
+                    </ul>
+                </div>
+                <div class="bg-gray-50 rounded-2xl p-6">
+                    <h4 class="font-bold text-gray-900 mb-3">Habilidades Clave</h4>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-start"><span class="text-primary mr-2 mt-1">▸</span> Desarrollo Fullstack desde cero</li>
+                        <li class="flex items-start"><span class="text-primary mr-2 mt-1">▸</span> Automatizaciones con Python y n8n</li>
+                        <li class="flex items-start"><span class="text-primary mr-2 mt-1">▸</span> Mantenimiento y optimización de sistemas</li>
+                        <li class="flex items-start"><span class="text-primary mr-2 mt-1">▸</span> Desarrollo de nuevos módulos</li>
+                        <li class="flex items-start"><span class="text-primary mr-2 mt-1">▸</span> Soporte técnico continuo</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicios" class="py-24 bg-gray-50" aria-label="Servicios ofrecidos">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in-up">
+                <span class="inline-block bg-blue-50 text-primary px-6 py-2 rounded-full text-sm font-semibold uppercase tracking-wide mb-6">Servicios</span>
+                <h2 class="text-4xl md:text-5xl font-display font-bold text-gray-900 mb-4">¿Qué Puedo Hacer por Ti?</h2>
+                <div class="section-divider max-w-24 mx-auto"></div>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-2xl p-8 shadow-lg card-hover">
+                    <div class="w-16 h-16 bg-primary rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-laptop-code text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Desarrollo Web</h3>
+                    <p class="text-gray-600 leading-relaxed">Creación de aplicaciones web modernas, responsivas y escalables desde cero o mejorando sistemas existentes.</p>
+                </div>
+                <div class="bg-white rounded-2xl p-8 shadow-lg card-hover">
+                    <div class="w-16 h-16 bg-secondary rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-mobile-alt text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Desarrollo Móvil</h3>
+                    <p class="text-gray-600 leading-relaxed">Aplicaciones móviles nativas e híbridas para iOS y Android usando React Native e Ionic.</p>
+                </div>
+                <div class="bg-white rounded-2xl p-8 shadow-lg card-hover">
+                    <div class="w-16 h-16 bg-accent rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-cogs text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Automatizaciones</h3>
+                    <p class="text-gray-600 leading-relaxed">Automatización de procesos empresariales con Python y n8n para optimizar operaciones.</p>
+                </div>
+                <div class="bg-white rounded-2xl p-8 shadow-lg card-hover">
+                    <div class="w-16 h-16 bg-primary rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-tools text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Mantenimiento y Soporte</h3>
+                    <p class="text-gray-600 leading-relaxed">Soporte técnico continuo, actualizaciones de software y mantenimiento preventivo de sistemas.</p>
+                </div>
+                <div class="bg-white rounded-2xl p-8 shadow-lg card-hover">
+                    <div class="w-16 h-16 bg-secondary rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-puzzle-piece text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Nuevos Módulos</h3>
+                    <p class="text-gray-600 leading-relaxed">Desarrollo de nuevas funcionalidades y módulos para software existente, manteniendo la arquitectura actual.</p>
+                </div>
+                <div class="bg-white rounded-2xl p-8 shadow-lg card-hover">
+                    <div class="w-16 h-16 bg-accent rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-server text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Administración de Servidores</h3>
+                    <p class="text-gray-600 leading-relaxed">Configuración, mantenimiento y optimización de servidores para garantizar máximo rendimiento.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technologies Section -->
+    <section id="tecnologias" class="py-24 bg-white" aria-label="Tecnologías y habilidades">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in-up">
+                <span class="inline-block bg-blue-50 text-primary px-6 py-2 rounded-full text-sm font-semibold uppercase tracking-wide mb-6">Tecnologías</span>
+                <h2 class="text-4xl md:text-5xl font-display font-bold text-gray-900 mb-4">Stack Tecnológico</h2>
+                <div class="section-divider max-w-24 mx-auto"></div>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="fade-in-up">
+                    <h3 class="text-xl font-bold text-gray-900 mb-6 text-center">Frontend</h3>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-gray-50 rounded-xl p-6 text-center tech-icon cursor-pointer border-2 border-gray-200 hover:border-primary">
+                            <i class="fab fa-angular text-5xl text-primary mb-3"></i>
+                            <p class="text-sm font-semibold text-gray-900">Angular</p>
+                        </div>
+                        <div class="bg-gray-50 rounded-xl p-6 text-center tech-icon cursor-pointer border-2 border-gray-200 hover:border-primary">
+                            <i class="fab fa-react text-5xl text-primary mb-3"></i>
+                            <p class="text-sm font-semibold text-gray-900">React</p>
+                        </div>
+                        <div class="bg-gray-50 rounded-xl p-6 text-center tech-icon cursor-pointer border-2 border-gray-200 hover:border-primary">
+                            <i class="fab fa-html5 text-5xl text-primary mb-3"></i>
+                            <p class="text-sm font-semibold text-gray-900">HTML5</p>
+                        </div>
+                        <div class="bg-gray-50 rounded-xl p-6 text-center tech-icon cursor-pointer border-2 border-gray-200 hover:border-primary">
+                            <i class="fab fa-css3-alt text-5xl text-primary mb-3"></i>
+                            <p class="text-sm font-semibold text-gray-900">CSS3</p>
+                        </div>
+                        <div class="bg-gray-50 rounded-xl p-6 text-center tech-icon cursor-pointer border-2 border-gray-200 hover:border-primary col-span-2">
+                            <i class="fab fa-js text-5xl text-primary mb-3"></i>
+                            <p class="text-sm font-semibold text-gray-900">JavaScript</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="fade-in-up">
+                    <h3 class="text-xl font-bold text-gray-900 mb-6 text-center">Backend</h3>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-gray-50 rounded-xl p-6 text-center tech-icon cursor-pointer border-2 border-gray-200 hover:border-primary">
+                            <i class="fab fa-node-js text-5xl text-primary mb-3"></i>
+                            <p class="text-sm font-semibold text-gray-900">Node.js</p>
+                        </div>
+                        <div class="bg-gray-50 rounded-xl p-6 text-center tech-icon cursor-pointer border-2 border-gray-200 hover:border-primary">
+                            <i class="fab fa-php text-5xl text-primary mb-3"></i>
+                            <p class="text-sm font-semibold text-gray-900">PHP</p>
+                        </div>
+                        <div class="bg-gray-50 rounded-xl p-6 text-center tech-icon cursor-pointer border-2 border-gray-200 hover:border-primary">
+                            <i class="fab fa-python text-5xl text-primary mb-3"></i>
+                            <p class="text-sm font-semibold text-gray-900">Python</p>
+                        </div>
+                        <div class="bg-gray-50 rounded-xl p-6 text-center tech-icon cursor-pointer border-2 border-gray-200 hover:border-primary">
+                            <i class="fab fa-microsoft text-5xl text-primary mb-3"></i>
+                            <p class="text-sm font-semibold text-gray-900">C#</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="fade-in-up">
+                    <h3 class="text-xl font-bold text-gray-900 mb-6 text-center">Móvil</h3>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-gray-50 rounded-xl p-6 text-center tech-icon cursor-pointer border-2 border-gray-200 hover:border-primary">
+                            <i class="fab fa-react text-5xl text-primary mb-3"></i>
+                            <p class="text-sm font-semibold text-gray-900">React Native</p>
+                        </div>
+                        <div class="bg-gray-50 rounded-xl p-6 text-center tech-icon cursor-pointer border-2 border-gray-200 hover:border-primary">
+                            <i class="fas fa-mobile-alt text-5xl text-primary mb-3"></i>
+                            <p class="text-sm font-semibold text-gray-900">Ionic</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="fade-in-up">
+                    <h3 class="text-xl font-bold text-gray-900 mb-6 text-center">Herramientas</h3>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-gray-50 rounded-xl p-6 text-center tech-icon cursor-pointer border-2 border-gray-200 hover:border-primary">
+                            <i class="fas fa-robot text-5xl text-primary mb-3"></i>
+                            <p class="text-sm font-semibold text-gray-900">n8n</p>
+                        </div>
+                        <div class="bg-gray-50 rounded-xl p-6 text-center tech-icon cursor-pointer border-2 border-gray-200 hover:border-primary">
+                            <i class="fab fa-git-alt text-5xl text-primary mb-3"></i>
+                            <p class="text-sm font-semibold text-gray-900">Git</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="proyectos" class="py-24 bg-gray-50" aria-label="Proyectos destacados">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in-up">
+                <span class="inline-block bg-blue-50 text-primary px-6 py-2 rounded-full text-sm font-semibold uppercase tracking-wide mb-6">Proyectos</span>
+                <h2 class="text-4xl md:text-5xl font-display font-bold text-gray-900 mb-4">Trabajos Destacados</h2>
+                <div class="section-divider max-w-24 mx-auto"></div>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg card-hover project-card group">
+                    <div class="relative h-48 bg-primary flex items-center justify-center">
+                        <i class="fas fa-briefcase text-white text-6xl"></i>
+                        <div class="project-overlay absolute inset-0 flex items-center justify-center">
+                            <a href="https://tictekia.com" target="_blank" class="w-20 h-20 bg-white rounded-full flex items-center justify-center text-primary hover:bg-gray-100 transition-all hover:scale-110">
+                                <i class="fas fa-external-link-alt text-2xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Tictekia</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">Mi emprendimiento personal. Plataforma tecnológica innovadora que ofrece soluciones digitales.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-50 text-primary px-3 py-1 rounded-full text-xs font-semibold">Emprendimiento</span>
+                            <span class="bg-blue-50 text-primary px-3 py-1 rounded-full text-xs font-semibold">Web</span>
+                        </div>
+                        <a href="https://tictekia.com" target="_blank" class="text-primary font-semibold hover:text-blue-700 transition-colors inline-flex items-center gap-2">
+                            tictekia.com <i class="fas fa-arrow-right text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg card-hover project-card group">
+                    <div class="relative h-48 bg-secondary flex items-center justify-center">
+                        <i class="fas fa-handshake text-white text-6xl"></i>
+                        <div class="project-overlay absolute inset-0 flex items-center justify-center">
+                            <a href="#" class="w-20 h-20 bg-white rounded-full flex items-center justify-center text-primary hover:bg-gray-100 transition-all hover:scale-110">
+                                <i class="fas fa-external-link-alt text-2xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">ProveClick</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">Aplicación móvil desarrollada para cliente en Chile que permite contratar servicios de manera rápida y eficiente.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-blue-50 text-primary px-3 py-1 rounded-full text-xs font-semibold">Móvil</span>
+                            <span class="bg-blue-50 text-primary px-3 py-1 rounded-full text-xs font-semibold">React Native</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg card-hover project-card group">
+                    <div class="relative h-48 bg-accent flex items-center justify-center">
+                        <i class="fas fa-tasks text-white text-6xl"></i>
+                        <div class="project-overlay absolute inset-0 flex items-center justify-center">
+                            <a href="#" class="w-20 h-20 bg-white rounded-full flex items-center justify-center text-primary hover:bg-gray-100 transition-all hover:scale-110">
+                                <i class="fas fa-external-link-alt text-2xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Sistema de Gestión de Actividades</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">Software completo desarrollado para Sasj que permite gestionar y controlar actividades empresariales de manera eficiente.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-blue-50 text-primary px-3 py-1 rounded-full text-xs font-semibold">Web</span>
+                            <span class="bg-blue-50 text-primary px-3 py-1 rounded-full text-xs font-semibold">Fullstack</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg card-hover project-card group">
+                    <div class="relative h-48 bg-primary flex items-center justify-center">
+                        <i class="fas fa-building text-white text-6xl"></i>
+                        <div class="project-overlay absolute inset-0 flex items-center justify-center">
+                            <a href="#" class="w-20 h-20 bg-white rounded-full flex items-center justify-center text-primary hover:bg-gray-100 transition-all hover:scale-110">
+                                <i class="fas fa-external-link-alt text-2xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Control de Activos Patrimoniales</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">Sistema desarrollado para Sasj que permite llevar un control detallado de los activos patrimoniales de la empresa.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-blue-50 text-primary px-3 py-1 rounded-full text-xs font-semibold">Web</span>
+                            <span class="bg-blue-50 text-primary px-3 py-1 rounded-full text-xs font-semibold">Fullstack</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg card-hover project-card group">
+                    <div class="relative h-48 bg-secondary flex items-center justify-center">
+                        <i class="fas fa-car text-white text-6xl"></i>
+                        <div class="project-overlay absolute inset-0 flex items-center justify-center">
+                            <a href="#" class="w-20 h-20 bg-white rounded-full flex items-center justify-center text-primary hover:bg-gray-100 transition-all hover:scale-110">
+                                <i class="fas fa-external-link-alt text-2xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Aplicaciones Tipo Uber</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">Desarrollo de aplicaciones móviles tipo Uber con funcionalidades de geolocalización, pagos y gestión de servicios.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-blue-50 text-primary px-3 py-1 rounded-full text-xs font-semibold">Móvil</span>
+                            <span class="bg-blue-50 text-primary px-3 py-1 rounded-full text-xs font-semibold">React Native</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg card-hover project-card group">
+                    <div class="relative h-48 bg-accent flex items-center justify-center">
+                        <i class="fas fa-shopping-cart text-white text-6xl"></i>
+                        <div class="project-overlay absolute inset-0 flex items-center justify-center">
+                            <a href="#" class="w-20 h-20 bg-white rounded-full flex items-center justify-center text-primary hover:bg-gray-100 transition-all hover:scale-110">
+                                <i class="fas fa-external-link-alt text-2xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Actualización Cartolito</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">Migración y actualización completa del software de compras de Cartolito a la versión actual de Angular.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-blue-50 text-primary px-3 py-1 rounded-full text-xs font-semibold">Web</span>
+                            <span class="bg-blue-50 text-primary px-3 py-1 rounded-full text-xs font-semibold">Angular</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="py-24 bg-white" aria-label="Información de contacto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in-up">
+                <span class="inline-block bg-blue-50 text-primary px-6 py-2 rounded-full text-sm font-semibold uppercase tracking-wide mb-6">Contacto</span>
+                <h2 class="text-4xl md:text-5xl font-display font-bold text-gray-900 mb-4">Trabajemos Juntos</h2>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+                    ¿Tienes un proyecto en mente? Estoy disponible para discutir cómo puedo ayudarte 
+                    a hacerlo realidad. Contáctame y hablemos sobre tus necesidades.
+                </p>
+            </div>
+            <div class="max-w-5xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-8 mb-12">
+                    <div class="bg-primary rounded-2xl p-8 shadow-lg card-hover text-white">
+                        <div class="flex items-center gap-6 mb-6">
+                            <div class="w-20 h-20 bg-white bg-opacity-20 rounded-2xl flex items-center justify-center">
+                                <i class="fas fa-envelope text-3xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold mb-2">Email Principal</h4>
+                                <a href="mailto:hola@devjc.com" class="text-white text-opacity-90 hover:text-white transition-colors break-all font-medium">hola@devjc.com</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-secondary rounded-2xl p-8 shadow-lg card-hover text-white">
+                        <div class="flex items-center gap-6 mb-6">
+                            <div class="w-20 h-20 bg-white bg-opacity-20 rounded-2xl flex items-center justify-center">
+                                <i class="fas fa-envelope text-3xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold mb-2">Email Alternativo</h4>
+                                <a href="mailto:juancarlosmh095@gmail.com" class="text-white text-opacity-90 hover:text-white transition-colors break-all font-medium">juancarlosmh095@gmail.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid md:grid-cols-2 gap-8 mb-12">
+                    <div class="bg-gray-50 rounded-2xl p-6 shadow border border-gray-200">
+                        <div class="flex items-center gap-4">
+                            <div class="w-14 h-14 bg-primary bg-opacity-10 rounded-xl flex items-center justify-center">
+                                <i class="fas fa-map-marker-alt text-primary text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-gray-900">Ubicación</h4>
+                                <p class="text-gray-600">Nuevo León, México</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-gray-50 rounded-2xl p-6 shadow border border-gray-200">
+                        <div class="flex items-center gap-4">
+                            <div class="w-14 h-14 bg-primary bg-opacity-10 rounded-xl flex items-center justify-center">
+                                <i class="fas fa-globe text-primary text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-gray-900">Emprendimiento</h4>
+                                <a href="https://tictekia.com" target="_blank" class="text-primary hover:text-blue-700 transition-colors font-semibold">tictekia.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-primary rounded-3xl p-12 text-center text-white shadow-2xl relative overflow-hidden">
+                    <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.1"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+                    <div class="relative z-10">
+                        <i class="fas fa-file-pdf text-7xl mb-6"></i>
+                        <h3 class="text-3xl font-display font-bold mb-4">Descarga mi CV</h3>
+                        <p class="text-lg mb-8 text-white text-opacity-90">Obtén una copia de mi currículum vitae en formato PDF</p>
+                        <a href="assets/cv.pdf" id="downloadCVBtnBottom" download="CV_Juan_Carlos_Mendez_Hernandez.pdf" class="inline-block bg-white text-primary px-10 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all hover:shadow-xl hover:-translate-y-1">
+                            Descargar CV
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12" role="contentinfo" aria-label="Pie de página">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6 mb-8">
+                <div class="text-center md:text-left">
+                    <h3 class="text-xl font-display font-bold text-white mb-2">Juan Carlos Méndez Hernández</h3>
+                    <p class="text-gray-400">Desarrollador Fullstack Freelancer</p>
+                </div>
+                <div class="flex flex-wrap justify-center gap-6">
+                    <a href="#inicio" class="text-gray-400 hover:text-white transition-colors">Inicio</a>
+                    <a href="#sobre-mi" class="text-gray-400 hover:text-white transition-colors">Sobre Mí</a>
+                    <a href="#experiencia" class="text-gray-400 hover:text-white transition-colors">Experiencia</a>
+                    <a href="#servicios" class="text-gray-400 hover:text-white transition-colors">Servicios</a>
+                    <a href="#proyectos" class="text-gray-400 hover:text-white transition-colors">Proyectos</a>
+                    <a href="#contacto" class="text-gray-400 hover:text-white transition-colors">Contacto</a>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-500">
+                <p>&copy; 2024 Juan Carlos Méndez Hernández. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Juan Carlos Méndez Hernández",
+        "alternateName": "JCMH",
+        "jobTitle": "Desarrollador Fullstack",
+        "description": "Ingeniero en Sistemas Computacionales con más de 8 años de experiencia desarrollando aplicaciones web y móviles desde cero. Especialista en Angular, Node.js, PHP, Python, React Native y automatizaciones.",
+        "birthDate": "1995-07-15",
+        "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "Nuevo León",
+            "addressCountry": "MX"
+        },
+        "alumniOf": {
+            "@type": "EducationalOrganization",
+            "name": "Ingeniero en Sistemas Computacionales"
+        },
+        "knowsAbout": [
+            "Desarrollo Web",
+            "Desarrollo Móvil",
+            "Angular",
+            "Node.js",
+            "PHP",
+            "Python",
+            "React Native",
+            "React",
+            "Ionic",
+            "C#",
+            "Automatización",
+            "n8n",
+            "Fullstack Development"
+        ],
+        "url": "https://juancarlosmendez.dev",
+        "sameAs": ["https://tictekia.com"],
+        "email": ["hola@devjc.com", "juancarlosmh095@gmail.com"],
+        "image": "https://juancarlosmendez.dev/og-image.jpg",
+        "worksFor": {
+            "@type": "Organization",
+            "name": "RAGASA"
+        },
+        "hasOccupation": {
+            "@type": "Occupation",
+            "name": "Desarrollador Fullstack",
+            "occupationLocation": {
+                "@type": "Country",
+                "name": "México"
+            },
+            "skills": ["Angular", "Node.js", "PHP", "Python", "React Native", "React", "Ionic", "C#"]
+        }
+    }
+    </script>
+    
+    <!-- Additional Structured Data - WebSite -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Juan Carlos Méndez Hernández - Desarrollador Fullstack",
+        "url": "https://juancarlosmendez.dev",
+        "description": "Portafolio profesional de Juan Carlos Méndez Hernández, Desarrollador Fullstack Freelancer con +8 años de experiencia",
+        "author": {
+            "@type": "Person",
+            "name": "Juan Carlos Méndez Hernández"
+        },
+        "inLanguage": "es-MX"
+    }
+    </script>
+
+    <script src="script.js"></script>
+    <script>
+        // Manejo del logo con fallback
+        document.addEventListener('DOMContentLoaded', function() {
+            const logoImg = document.querySelector('.logo-img');
+            const logoText = document.querySelector('.logo-text');
+            
+            if (logoImg) {
+                logoImg.addEventListener('error', function() {
+                    this.style.display = 'none';
+                    if (logoText) {
+                        logoText.style.display = 'block';
+                    }
+                });
+                
+                // Si la imagen no tiene src o está vacío, mostrar texto
+                if (!logoImg.src || logoImg.src === window.location.href) {
+                    logoImg.style.display = 'none';
+                    if (logoText) {
+                        logoText.style.display = 'block';
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
