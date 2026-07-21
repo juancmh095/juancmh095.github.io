@@ -269,14 +269,12 @@
             outline-offset: 2px;
         }
         
-        .project-overlay {
-            background: rgba(37, 99, 235, 0.95);
-            opacity: 0;
-            transition: opacity 0.3s ease;
+        .project-card img {
+            transition: transform 0.4s ease;
         }
         
-        .project-card:hover .project-overlay {
-            opacity: 1;
+        .project-card:hover img {
+            transform: scale(1.05);
         }
         
         .tech-icon {
@@ -597,10 +595,10 @@
                     <h4 class="font-bold text-gray-900 mb-3">Proyectos Destacados como Freelancer</h4>
                     <ul class="space-y-2 text-sm text-gray-600">
                         <li class="flex items-start"><span class="text-primary mr-2 mt-1">▸</span> Soporte y mantenimiento para <strong>Sasj</strong></li>
-                        <li class="flex items-start"><span class="text-primary mr-2 mt-1">▸</span> Desarrollo de 2 softwares: Gestión de Actividades y Control de Activos</li>
-                        <li class="flex items-start"><span class="text-primary mr-2 mt-1">▸</span> Aplicación <strong>ProveClick</strong> (Chile)</li>
-                        <li class="flex items-start"><span class="text-primary mr-2 mt-1">▸</span> Aplicaciones tipo Uber</li>
-                        <li class="flex items-start"><span class="text-primary mr-2 mt-1">▸</span> Actualización Angular para <strong>Cartolito</strong></li>
+                        <li class="flex items-start"><span class="text-primary mr-2 mt-1">▸</span> Sistema de compras e inventario <strong>Cartolito</strong></li>
+                        <li class="flex items-start"><span class="text-primary mr-2 mt-1">▸</span> Mejoras al sistema interno <strong>Ragasa</strong></li>
+                        <li class="flex items-start"><span class="text-primary mr-2 mt-1">▸</span> Sistema integral florería</li>
+                        <li class="flex items-start"><span class="text-primary mr-2 mt-1">▸</span> Vault de datos y flujos n8n para <strong>Codex</strong></li>
                     </ul>
                 </div>
                 <div class="bg-gray-50 rounded-2xl p-6">
@@ -767,54 +765,92 @@
             </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="bg-white rounded-2xl overflow-hidden shadow-lg card-hover project-card group">
-                    <div class="relative h-48 bg-primary flex items-center justify-center">
-                        <i class="fas fa-briefcase text-white text-6xl"></i>
-                        <div class="project-overlay absolute inset-0 flex items-center justify-center">
-                            <a href="https://tictekia.com" target="_blank" class="w-20 h-20 bg-white rounded-full flex items-center justify-center text-primary hover:bg-gray-100 transition-all hover:scale-110">
-                                <i class="fas fa-external-link-alt text-2xl"></i>
-                            </a>
-                        </div>
+                    <div class="relative h-48 bg-primary flex items-center justify-center overflow-hidden">
+                        <i class="fas fa-boxes-stacked text-white text-6xl"></i>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900 mb-3">Tictekia</h3>
-                        <p class="text-gray-600 mb-4 leading-relaxed">Mi emprendimiento personal. Plataforma tecnológica innovadora que ofrece soluciones digitales.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-blue-50 text-primary px-3 py-1 rounded-full text-xs font-semibold">Emprendimiento</span>
-                            <span class="bg-blue-50 text-primary px-3 py-1 rounded-full text-xs font-semibold">Web</span>
-                        </div>
-                        <a href="https://tictekia.com" target="_blank" class="text-primary font-semibold hover:text-blue-700 transition-colors inline-flex items-center gap-2">
-                            tictekia.com <i class="fas fa-arrow-right text-sm"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-2xl overflow-hidden shadow-lg card-hover project-card group">
-                    <div class="relative h-48 bg-secondary flex items-center justify-center">
-                        <i class="fas fa-handshake text-white text-6xl"></i>
-                        <div class="project-overlay absolute inset-0 flex items-center justify-center">
-                            <a href="#" class="w-20 h-20 bg-white rounded-full flex items-center justify-center text-primary hover:bg-gray-100 transition-all hover:scale-110">
-                                <i class="fas fa-external-link-alt text-2xl"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900 mb-3">ProveClick</h3>
-                        <p class="text-gray-600 mb-4 leading-relaxed">Aplicación móvil desarrollada para cliente en Chile que permite contratar servicios de manera rápida y eficiente.</p>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Sistema de Compras e Inventario Cartolito</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">Sistema para gestionar compras e inventario de Cartolito de forma centralizada y eficiente.</p>
                         <div class="flex flex-wrap gap-2">
-                            <span class="bg-blue-50 text-primary px-3 py-1 rounded-full text-xs font-semibold">Móvil</span>
-                            <span class="bg-blue-50 text-primary px-3 py-1 rounded-full text-xs font-semibold">React Native</span>
+                            <span class="bg-blue-50 text-primary px-3 py-1 rounded-full text-xs font-semibold">Web</span>
+                            <span class="bg-blue-50 text-primary px-3 py-1 rounded-full text-xs font-semibold">Inventario</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="bg-white rounded-2xl overflow-hidden shadow-lg card-hover project-card group">
-                    <div class="relative h-48 bg-accent flex items-center justify-center">
-                        <i class="fas fa-tasks text-white text-6xl"></i>
-                        <div class="project-overlay absolute inset-0 flex items-center justify-center">
-                            <a href="#" class="w-20 h-20 bg-white rounded-full flex items-center justify-center text-primary hover:bg-gray-100 transition-all hover:scale-110">
-                                <i class="fas fa-external-link-alt text-2xl"></i>
-                            </a>
+                    <div class="relative h-48 overflow-hidden bg-gray-100">
+                        <img src="assets/proyectos/ragasa.png" alt="Sistema interno Ragasa" class="w-full h-full object-cover object-top">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Desarrollo de Mejoras Sistema Interno Ragasa</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">Integrar nuevas herramientas, módulos y reportes en sistemas del negocio.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-blue-50 text-primary px-3 py-1 rounded-full text-xs font-semibold">Web</span>
+                            <span class="bg-blue-50 text-primary px-3 py-1 rounded-full text-xs font-semibold">Módulos</span>
                         </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg card-hover project-card group">
+                    <div class="relative h-48 bg-accent flex items-center justify-center overflow-hidden">
+                        <i class="fas fa-globe text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Páginas Web</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">Diseño y desarrollo de páginas web modernas, responsivas y orientadas a resultados.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-blue-50 text-primary px-3 py-1 rounded-full text-xs font-semibold">Web</span>
+                            <span class="bg-blue-50 text-primary px-3 py-1 rounded-full text-xs font-semibold">Frontend</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg card-hover project-card group">
+                    <div class="relative h-48 overflow-hidden bg-gray-100">
+                        <img src="assets/proyectos/floreria.png" alt="Sistema Integral Florería" class="w-full h-full object-cover object-top">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Sistema Integral Florería</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">Integrar control de inventarios, compras, vendedores y rutas.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-blue-50 text-primary px-3 py-1 rounded-full text-xs font-semibold">Web</span>
+                            <span class="bg-blue-50 text-primary px-3 py-1 rounded-full text-xs font-semibold">Fullstack</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg card-hover project-card group">
+                    <div class="relative h-48 overflow-hidden bg-gray-100">
+                        <img src="assets/proyectos/codex_vault.png" alt="Vault de Datos Codex" class="w-full h-full object-cover object-top">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Vault de Datos Codex</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">Monitoreo, análisis y tratamiento de datos para reenvío a clientes de Codex.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-blue-50 text-primary px-3 py-1 rounded-full text-xs font-semibold">Datos</span>
+                            <span class="bg-blue-50 text-primary px-3 py-1 rounded-full text-xs font-semibold">Análisis</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg card-hover project-card group">
+                    <div class="relative h-48 overflow-hidden bg-gray-100">
+                        <img src="assets/proyectos/n8n_codex.png" alt="Flujos n8n Codex" class="w-full h-full object-cover object-top">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Flujos n8n</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">Integrar automatizaciones de empresa Codex a clientes.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-blue-50 text-primary px-3 py-1 rounded-full text-xs font-semibold">n8n</span>
+                            <span class="bg-blue-50 text-primary px-3 py-1 rounded-full text-xs font-semibold">Automatización</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg card-hover project-card group">
+                    <div class="relative h-48 overflow-hidden bg-gray-100">
+                        <img src="assets/proyectos/gestion-actividades.jpeg" alt="Sistema de Gestión de Actividades" class="w-full h-full object-cover object-top">
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-gray-900 mb-3">Sistema de Gestión de Actividades</h3>
@@ -827,13 +863,8 @@
                 </div>
 
                 <div class="bg-white rounded-2xl overflow-hidden shadow-lg card-hover project-card group">
-                    <div class="relative h-48 bg-primary flex items-center justify-center">
-                        <i class="fas fa-building text-white text-6xl"></i>
-                        <div class="project-overlay absolute inset-0 flex items-center justify-center">
-                            <a href="#" class="w-20 h-20 bg-white rounded-full flex items-center justify-center text-primary hover:bg-gray-100 transition-all hover:scale-110">
-                                <i class="fas fa-external-link-alt text-2xl"></i>
-                            </a>
-                        </div>
+                    <div class="relative h-48 overflow-hidden bg-gray-100">
+                        <img src="assets/proyectos/control-activos.jpeg" alt="Control de Activos Patrimoniales" class="w-full h-full object-cover object-top">
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-gray-900 mb-3">Control de Activos Patrimoniales</h3>
@@ -846,13 +877,8 @@
                 </div>
 
                 <div class="bg-white rounded-2xl overflow-hidden shadow-lg card-hover project-card group">
-                    <div class="relative h-48 bg-secondary flex items-center justify-center">
+                    <div class="relative h-48 bg-accent flex items-center justify-center overflow-hidden">
                         <i class="fas fa-car text-white text-6xl"></i>
-                        <div class="project-overlay absolute inset-0 flex items-center justify-center">
-                            <a href="#" class="w-20 h-20 bg-white rounded-full flex items-center justify-center text-primary hover:bg-gray-100 transition-all hover:scale-110">
-                                <i class="fas fa-external-link-alt text-2xl"></i>
-                            </a>
-                        </div>
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-gray-900 mb-3">Aplicaciones Tipo Uber</h3>
@@ -860,25 +886,6 @@
                         <div class="flex flex-wrap gap-2">
                             <span class="bg-blue-50 text-primary px-3 py-1 rounded-full text-xs font-semibold">Móvil</span>
                             <span class="bg-blue-50 text-primary px-3 py-1 rounded-full text-xs font-semibold">React Native</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-2xl overflow-hidden shadow-lg card-hover project-card group">
-                    <div class="relative h-48 bg-accent flex items-center justify-center">
-                        <i class="fas fa-shopping-cart text-white text-6xl"></i>
-                        <div class="project-overlay absolute inset-0 flex items-center justify-center">
-                            <a href="#" class="w-20 h-20 bg-white rounded-full flex items-center justify-center text-primary hover:bg-gray-100 transition-all hover:scale-110">
-                                <i class="fas fa-external-link-alt text-2xl"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900 mb-3">Actualización Cartolito</h3>
-                        <p class="text-gray-600 mb-4 leading-relaxed">Migración y actualización completa del software de compras de Cartolito a la versión actual de Angular.</p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="bg-blue-50 text-primary px-3 py-1 rounded-full text-xs font-semibold">Web</span>
-                            <span class="bg-blue-50 text-primary px-3 py-1 rounded-full text-xs font-semibold">Angular</span>
                         </div>
                     </div>
                 </div>
@@ -900,48 +907,24 @@
             <div class="max-w-5xl mx-auto">
                 <div class="grid md:grid-cols-2 gap-8 mb-12">
                     <div class="bg-primary rounded-2xl p-8 shadow-lg card-hover text-white">
-                        <div class="flex items-center gap-6 mb-6">
+                        <div class="flex items-center gap-6">
                             <div class="w-20 h-20 bg-white bg-opacity-20 rounded-2xl flex items-center justify-center">
                                 <i class="fas fa-envelope text-3xl"></i>
                             </div>
                             <div>
-                                <h4 class="text-xl font-bold mb-2">Email Principal</h4>
-                                <a href="mailto:hola@devjc.com" class="text-white text-opacity-90 hover:text-white transition-colors break-all font-medium">hola@devjc.com</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bg-secondary rounded-2xl p-8 shadow-lg card-hover text-white">
-                        <div class="flex items-center gap-6 mb-6">
-                            <div class="w-20 h-20 bg-white bg-opacity-20 rounded-2xl flex items-center justify-center">
-                                <i class="fas fa-envelope text-3xl"></i>
-                            </div>
-                            <div>
-                                <h4 class="text-xl font-bold mb-2">Email Alternativo</h4>
+                                <h4 class="text-xl font-bold mb-2">Email Personal</h4>
                                 <a href="mailto:juancarlosmh095@gmail.com" class="text-white text-opacity-90 hover:text-white transition-colors break-all font-medium">juancarlosmh095@gmail.com</a>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="grid md:grid-cols-2 gap-8 mb-12">
-                    <div class="bg-gray-50 rounded-2xl p-6 shadow border border-gray-200">
-                        <div class="flex items-center gap-4">
-                            <div class="w-14 h-14 bg-primary bg-opacity-10 rounded-xl flex items-center justify-center">
-                                <i class="fas fa-map-marker-alt text-primary text-xl"></i>
+                    <div class="bg-gray-50 rounded-2xl p-8 shadow-lg border border-gray-200 card-hover">
+                        <div class="flex items-center gap-6">
+                            <div class="w-20 h-20 bg-primary bg-opacity-10 rounded-2xl flex items-center justify-center">
+                                <i class="fas fa-map-marker-alt text-primary text-3xl"></i>
                             </div>
                             <div>
-                                <h4 class="text-lg font-bold text-gray-900">Ubicación</h4>
-                                <p class="text-gray-600">Nuevo León, México</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bg-gray-50 rounded-2xl p-6 shadow border border-gray-200">
-                        <div class="flex items-center gap-4">
-                            <div class="w-14 h-14 bg-primary bg-opacity-10 rounded-xl flex items-center justify-center">
-                                <i class="fas fa-globe text-primary text-xl"></i>
-                            </div>
-                            <div>
-                                <h4 class="text-lg font-bold text-gray-900">Emprendimiento</h4>
-                                <a href="https://tictekia.com" target="_blank" class="text-primary hover:text-blue-700 transition-colors font-semibold">tictekia.com</a>
+                                <h4 class="text-xl font-bold text-gray-900 mb-2">Ubicación</h4>
+                                <p class="text-gray-600 font-medium">Nuevo León, México</p>
                             </div>
                         </div>
                     </div>
@@ -1019,8 +1002,7 @@
             "Fullstack Development"
         ],
         "url": "https://juancarlosmendez.dev",
-        "sameAs": ["https://tictekia.com"],
-        "email": ["hola@devjc.com", "juancarlosmh095@gmail.com"],
+        "email": "juancarlosmh095@gmail.com",
         "image": "https://juancarlosmendez.dev/og-image.jpg",
         "worksFor": {
             "@type": "Organization",
